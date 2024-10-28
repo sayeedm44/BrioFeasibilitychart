@@ -1,5 +1,5 @@
 function calculateCabinDimensions() {
-    // First table calculations
+    // Existing table calculations (1 to 12)
     const width1 = parseFloat(document.getElementById('width1').value) || 0;
     const depth1 = parseFloat(document.getElementById('depth1').value) || 0;
     const mechanism1 = 300;
@@ -14,7 +14,6 @@ function calculateCabinDimensions() {
     document.getElementById('cabinWidth1').innerText = cabinWidth1 > 0 ? cabinWidth1 : "Invalid";
     document.getElementById('cabinDepth1').innerText = cabinDepth1 > 0 ? cabinDepth1 : "Invalid";
 
-    // Second table calculations
     const width2 = parseFloat(document.getElementById('width2').value) || 0;
     const depth2 = parseFloat(document.getElementById('depth2').value) || 0;
     const mechanism2 = 300;
@@ -30,11 +29,11 @@ function calculateCabinDimensions() {
     document.getElementById('cabinDepth2').innerText = cabinDepth2 > 0 ? cabinDepth2 : "Invalid";
 
     // Helper function for new tables
-    const calculateDimensions = (widthId, depthId, cabinWidthId, cabinDepthId, mechanism, cabinThickness, bufferWidth, bufferDepth, totalSpaceDoorBuffer, isMechanismWidth) => {
+    const calculateDimensions = (widthId, depthId, cabinWidthId, cabinDepthId, mechanism, cabinThickness, bufferWidth, bufferDepth, totalSpaceDoorBuffer, guideRails = 0, isMechanismWidth) => {
         const width = parseFloat(document.getElementById(widthId).value) || 0;
         const depth = parseFloat(document.getElementById(depthId).value) || 0;
 
-        const cabinWidth = width - (isMechanismWidth ? mechanism : 0) - cabinThickness - bufferWidth - (isMechanismWidth ? 0 : bufferDepth);
+        const cabinWidth = width - (isMechanismWidth ? mechanism : 0) - cabinThickness - bufferWidth - guideRails;
         const cabinDepth = depth - (isMechanismWidth ? bufferDepth : mechanism) - totalSpaceDoorBuffer;
 
         document.getElementById(cabinWidthId).innerText = cabinWidth > 0 ? cabinWidth : "Invalid";
@@ -47,16 +46,26 @@ function calculateCabinDimensions() {
     calculateDimensions('width5', 'depth5', 'cabinWidth5', 'cabinDepth5', 300, 60, 60, 60, 60, true);
     calculateDimensions('width6', 'depth6', 'cabinWidth6', 'cabinDepth6', 300, 60, 70, 70, 60, false);
 
-    // New tables from the request
-    calculateDimensions('width7', 'depth7', 'cabinWidth7', 'cabinDepth7', 400, 60, 60, 60, 200, true);
-    calculateDimensions('width8', 'depth8', 'cabinWidth8', 'cabinDepth8', 400, 60, 60, 60, 200, false);
-    calculateDimensions('width9', 'depth9', 'cabinWidth9', 'cabinDepth9', 300, 60, 60, 60, 60, true);
-    calculateDimensions('width10', 'depth10', 'cabinWidth10', 'cabinDepth10', 400, 60, 60, 60, 270, false);
-    calculateDimensions('width11', 'depth11', 'cabinWidth11', 'cabinDepth11', 400, 60, 60, 60, 60, true);
-    calculateDimensions('width12', 'depth12', 'cabinWidth12', 'cabinDepth12', 400, 60, 60, 60, 60, false);
+    // New MRL tables (13 to 18)
+    calculateDimensions('width13', 'depth13', 'cabinWidth13', 'cabinDepth13', 550, 60, 150, 90, 200, 0, true);
+    calculateDimensions('width14', 'depth14', 'cabinWidth14', 'cabinDepth14', 250, 60, 0, 0, 200, 300, false);
+    calculateDimensions('width15', 'depth15', 'cabinWidth15', 'cabinDepth15', 550, 60, 150, 90, 270, 0, true);
+    calculateDimensions('width16', 'depth16', 'cabinWidth16', 'cabinDepth16', 250, 60, 0, 0, 270, 300, false);
+    calculateDimensions('width17', 'depth17', 'cabinWidth17', 'cabinDepth17', 550, 60, 150, 90, 60, 0, true);
+    calculateDimensions('width18', 'depth18', 'cabinWidth18', 'cabinDepth18', 250, 60, 0, 0, 60, 300, false);
 }
 
 // Event listeners for all inputs
-['width1', 'depth1', 'width2', 'depth2', 'width3', 'depth3', 'width4', 'depth4', 'width5', 'depth5', 'width6', 'depth6', 'width7', 'depth7', 'width8', 'depth8', 'width9', 'depth9', 'width10', 'depth10', 'width11', 'depth11', 'width12', 'depth12'].forEach(id => {
+[
+    'width1', 'depth1', 'width2', 'depth2', 
+    'width3', 'depth3', 'width4', 'depth4', 
+    'width5', 'depth5', 'width6', 'depth6', 
+    'width7', 'depth7', 'width8', 'depth8', 
+    'width9', 'depth9', 'width10', 'depth10', 
+    'width11', 'depth11', 'width12', 'depth12', 
+    'width13', 'depth13', 'width14', 'depth14', 
+    'width15', 'depth15', 'width16', 'depth16', 
+    'width17', 'depth17', 'width18', 'depth18'
+].forEach(id => {
     document.getElementById(id).addEventListener('input', calculateCabinDimensions);
 });
