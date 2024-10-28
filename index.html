@@ -9,36 +9,37 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        h1 {
-            text-align: center;
+        h1, h2, h3 {
+            color: #333;
         }
-        .note {
-            font-style: italic;
-            margin-bottom: 20px;
+        p.note {
+            font-weight: bold;
+            color: #555;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin: 20px 0;
         }
-        th, td {
-            border: 1px solid #000;
-            padding: 8px;
+        table, th, td {
+            border: 1px solid #ccc;
             text-align: center;
+            padding: 8px;
         }
         th {
             background-color: #f2f2f2;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
 
     <h1>Brio Feasibility Chart</h1>
-
-    <p class="note">
-        Note: All Measurements are in Millimeters (mm).<br>
-        Please provide values for width and depth.
-    </p>
+    <p class="note">Note: All Measurements are in Millimeters (mm) <br>Please provide values for width and depth.</p>
 
     <h2>Centre Opening Min Shaft Sizes</h2>
     <table>
@@ -47,16 +48,82 @@
             <th>Size</th>
             <th>Min Shaft Required</th>
         </tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
+        <tr><td>500</td><td>1140</td><td>1200</td></tr>
+        <tr><td>550</td><td>1190</td><td>1250</td></tr>
+        <tr><td>600</td><td>1290</td><td>1350</td></tr>
+        <tr><td>650</td><td>1340</td><td>1400</td></tr>
+        <tr><td>700</td><td>1460</td><td>1550</td></tr>
+        <tr><td>750</td><td>1610</td><td>1700</td></tr>
+        <tr><td>800</td><td>1660</td><td>1750</td></tr>
+        <tr><td>900</td><td>1890</td><td>1950</td></tr>
+        <tr><td>1000</td><td>2080</td><td>2150</td></tr>
     </table>
+
+    <h2>Telescopic (LH/RH) Min Shaft Sizes</h2>
+    <table>
+        <tr>
+            <th>Clear Opening</th>
+            <th>Header Size</th>
+            <th>Min Shaft Required</th>
+        </tr>
+        <tr><td>500</td><td>875</td><td>1050</td></tr>
+        <tr><td>550</td><td>935</td><td>1100</td></tr>
+        <tr><td>600</td><td>1000</td><td>1200</td></tr>
+        <tr><td>650</td><td>1050</td><td>1250</td></tr>
+        <tr><td>700</td><td>1135</td><td>1300</td></tr>
+        <tr><td>750</td><td>1235</td><td>1400</td></tr>
+        <tr><td>800</td><td>1285</td><td>1450</td></tr>
+        <tr><td>900</td><td>1450</td><td>1650</td></tr>
+        <tr><td>1000</td><td>1595</td><td>1780</td></tr>
+    </table>
+
+    <h2>Hydraulic</h2>
+    <h3>Hydraulic Auto Door Central Opening (Mechanism in Width)</h3>
+    <table>
+        <tr>
+            <th>Width</th>
+            <th>Depth</th>
+            <th>Mechanism</th>
+            <th>Cabin Thickness</th>
+            <th>Buffer Between Cabin and Shaft in Width</th>
+            <th>Buffer Between Cabin and Shaft in Depth</th>
+            <th>Total Space Occupied By Door Including Buffer</th>
+            <th>Cabin Width</th>
+            <th>Cabin Depth</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="width" placeholder="Enter Width"></td>
+            <td><input type="number" id="depth" placeholder="Enter Depth"></td>
+            <td>300</td>
+            <td>60</td>
+            <td>60</td>
+            <td>60</td>
+            <td>200</td>
+            <td><span id="cabinWidth">-</span></td>
+            <td><span id="cabinDepth">-</span></td>
+        </tr>
+    </table>
+
+    <script>
+        function calculateCabinDimensions() {
+            const width = parseFloat(document.getElementById('width').value) || 0;
+            const depth = parseFloat(document.getElementById('depth').value) || 0;
+            const mechanism = 300;
+            const cabinThickness = 60;
+            const bufferWidth = 60;
+            const bufferDepth = 60;
+            const totalSpaceDoorBuffer = 200;
+
+            const cabinWidth = width - mechanism - cabinThickness - bufferWidth;
+            const cabinDepth = depth - bufferDepth - totalSpaceDoorBuffer;
+
+            document.getElementById('cabinWidth').innerText = cabinWidth > 0 ? cabinWidth : "Invalid";
+            document.getElementById('cabinDepth').innerText = cabinDepth > 0 ? cabinDepth : "Invalid";
+        }
+
+        document.getElementById('width').addEventListener('input', calculateCabinDimensions);
+        document.getElementById('depth').addEventListener('input', calculateCabinDimensions);
+    </script>
 
 </body>
 </html>
