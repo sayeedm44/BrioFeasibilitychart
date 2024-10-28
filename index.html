@@ -99,44 +99,111 @@
         </tr>
     </table>
 
-    <script>
-        function calculateCabinDimensions() {
-            // First table calculations
-            const width1 = parseFloat(document.getElementById('width1').value) || 0;
-            const depth1 = parseFloat(document.getElementById('depth1').value) || 0;
-            const mechanism1 = 300;
-            const cabinThickness1 = 60;
-            const bufferWidth1 = 60;
-            const bufferDepth1 = 60;
-            const totalSpaceDoorBuffer1 = 200;
+    <h3>Hydraulic Auto Door Telescopic Opening (Mechanism in Width)</h3>
+    <table>
+        <tr>
+            <th>Width</th>
+            <th>Depth</th>
+            <th>Mechanism</th>
+            <th>Cabin Thickness</th>
+            <th>Buffer Between Cabin and Shaft in Width</th>
+            <th>Buffer Between Cabin and Shaft in Depth</th>
+            <th>Total Space Occupied By Door Including Buffer</th>
+            <th>Cabin Width</th>
+            <th>Cabin Depth</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="width3" placeholder="Enter Width"></td>
+            <td><input type="number" id="depth3" placeholder="Enter Depth"></td>
+            <td>300</td>
+            <td>60</td>
+            <td>60</td>
+            <td>60</td>
+            <td>270</td>
+            <td><span id="cabinWidth3">-</span></td>
+            <td><span id="cabinDepth3">-</span></td>
+        </tr>
+    </table>
 
-            const cabinWidth1 = width1 - mechanism1 - cabinThickness1 - bufferWidth1;
-            const cabinDepth1 = depth1 - bufferDepth1 - totalSpaceDoorBuffer1;
+    <h3>Hydraulic Auto Door Telescopic Opening (Mechanism in Depth)</h3>
+    <table>
+        <tr>
+            <th>Width</th>
+            <th>Depth</th>
+            <th>Mechanism</th>
+            <th>Cabin Thickness</th>
+            <th>Buffer Between Cabin and Shaft in Width</th>
+            <th>Buffer Between Cabin and Shaft in Depth</th>
+            <th>Total Space Occupied By Door Including Buffer</th>
+            <th>Cabin Width</th>
+            <th>Cabin Depth</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="width4" placeholder="Enter Width"></td>
+            <td><input type="number" id="depth4" placeholder="Enter Depth"></td>
+            <td>300</td>
+            <td>60</td>
+            <td>70</td>
+            <td>70</td>
+            <td>270</td>
+            <td><span id="cabinWidth4">-</span></td>
+            <td><span id="cabinDepth4">-</span></td>
+        </tr>
+    </table>
 
-            document.getElementById('cabinWidth1').innerText = cabinWidth1 > 0 ? cabinWidth1 : "Invalid";
-            document.getElementById('cabinDepth1').innerText = cabinDepth1 > 0 ? cabinDepth1 : "Invalid";
+    <h3>Hydraulic Manual Swing Door (Mechanism in Width)</h3>
+    <table>
+        <tr>
+            <th>Width</th>
+            <th>Depth</th>
+            <th>Mechanism</th>
+            <th>Cabin Thickness</th>
+            <th>Buffer Between Cabin and Shaft in Width</th>
+            <th>Buffer Between Cabin and Shaft in Depth</th>
+            <th>Total Space Occupied By Door Including Buffer</th>
+            <th>Cabin Width</th>
+            <th>Cabin Depth</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="width5" placeholder="Enter Width"></td>
+            <td><input type="number" id="depth5" placeholder="Enter Depth"></td>
+            <td>300</td>
+            <td>60</td>
+            <td>60</td>
+            <td>60</td>
+            <td>60</td>
+            <td><span id="cabinWidth5">-</span></td>
+            <td><span id="cabinDepth5">-</span></td>
+        </tr>
+    </table>
 
-            // Second table calculations
-            const width2 = parseFloat(document.getElementById('width2').value) || 0;
-            const depth2 = parseFloat(document.getElementById('depth2').value) || 0;
-            const mechanism2 = 300;
-            const cabinThickness2 = 60;
-            const bufferWidth2 = 70;
-            const bufferDepth2 = 70;
-            const totalSpaceDoorBuffer2 = 200;
+    <h3>Hydraulic Auto Door Telescopic Opening (Mechanism in Depth)</h3>
+    <table>
+        <tr>
+            <th>Width</th>
+            <th>Depth</th>
+            <th>Mechanism</th>
+            <th>Cabin Thickness</th>
+            <th>Buffer Between Cabin and Shaft in Width</th>
+            <th>Buffer Between Cabin and Shaft in Depth</th>
+            <th>Total Space Occupied By Door Including Buffer</th>
+            <th>Cabin Width</th>
+            <th>Cabin Depth</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="width6" placeholder="Enter Width"></td>
+            <td><input type="number" id="depth6" placeholder="Enter Depth"></td>
+            <td>300</td>
+            <td>60</td>
+            <td>70</td>
+            <td>70</td>
+            <td>60</td>
+            <td><span id="cabinWidth6">-</span></td>
+            <td><span id="cabinDepth6">-</span></td>
+        </tr>
+    </table>
 
-            const cabinWidth2 = width2 - cabinThickness2 - bufferWidth2 - bufferDepth2;
-            const cabinDepth2 = depth2 - mechanism2 - totalSpaceDoorBuffer2;
 
-            document.getElementById('cabinWidth2').innerText = cabinWidth2 > 0 ? cabinWidth2 : "Invalid";
-            document.getElementById('cabinDepth2').innerText = cabinDepth2 > 0 ? cabinDepth2 : "Invalid";
-        }
-
-        document.getElementById('width1').addEventListener('input', calculateCabinDimensions);
-        document.getElementById('depth1').addEventListener('input', calculateCabinDimensions);
-        document.getElementById('width2').addEventListener('input', calculateCabinDimensions);
-        document.getElementById('depth2').addEventListener('input', calculateCabinDimensions);
-    </script>
-
+<script src="calculateDimensions.js"></script>
 </body>
 </html>
