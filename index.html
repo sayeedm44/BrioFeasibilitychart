@@ -4,42 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brio Feasibility Chart</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p.note {
-            font-weight: bold;
-            color: #555;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-            text-align: center;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        input[type="number"] {
-            width: 100%;
-            padding: 5px;
-            box-sizing: border-box;
-        }
-    </style>
 </head>
 <body>
 
     <h1>Brio Feasibility Chart</h1>
-    <p class="note">Note: All Measurements are in Millimeters (mm) <br>Please provide values for width and depth.</p>
+    <p>Note: All Measurements are in Millimeters (mm) <br>Please provide values for width and depth.</p>
 
     <h2>Centre Opening Min Shaft Sizes</h2>
     <table>
@@ -92,37 +61,81 @@
             <th>Cabin Depth</th>
         </tr>
         <tr>
-            <td><input type="number" id="width" placeholder="Enter Width"></td>
-            <td><input type="number" id="depth" placeholder="Enter Depth"></td>
+            <td><input type="number" id="width1" placeholder="Enter Width"></td>
+            <td><input type="number" id="depth1" placeholder="Enter Depth"></td>
             <td>300</td>
             <td>60</td>
             <td>60</td>
             <td>60</td>
             <td>200</td>
-            <td><span id="cabinWidth">-</span></td>
-            <td><span id="cabinDepth">-</span></td>
+            <td><span id="cabinWidth1">-</span></td>
+            <td><span id="cabinDepth1">-</span></td>
+        </tr>
+    </table>
+
+    <h3>Hydraulic Auto Door Central Opening (Mechanism in Depth)</h3>
+    <table>
+        <tr>
+            <th>Width</th>
+            <th>Depth</th>
+            <th>Mechanism</th>
+            <th>Cabin Thickness</th>
+            <th>Buffer Between Cabin and Shaft in Width</th>
+            <th>Buffer Between Cabin and Shaft in Depth</th>
+            <th>Total Space Occupied By Door Including Buffer</th>
+            <th>Cabin Width</th>
+            <th>Cabin Depth</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="width2" placeholder="Enter Width"></td>
+            <td><input type="number" id="depth2" placeholder="Enter Depth"></td>
+            <td>300</td>
+            <td>60</td>
+            <td>70</td>
+            <td>70</td>
+            <td>200</td>
+            <td><span id="cabinWidth2">-</span></td>
+            <td><span id="cabinDepth2">-</span></td>
         </tr>
     </table>
 
     <script>
         function calculateCabinDimensions() {
-            const width = parseFloat(document.getElementById('width').value) || 0;
-            const depth = parseFloat(document.getElementById('depth').value) || 0;
-            const mechanism = 300;
-            const cabinThickness = 60;
-            const bufferWidth = 60;
-            const bufferDepth = 60;
-            const totalSpaceDoorBuffer = 200;
+            // First table calculations
+            const width1 = parseFloat(document.getElementById('width1').value) || 0;
+            const depth1 = parseFloat(document.getElementById('depth1').value) || 0;
+            const mechanism1 = 300;
+            const cabinThickness1 = 60;
+            const bufferWidth1 = 60;
+            const bufferDepth1 = 60;
+            const totalSpaceDoorBuffer1 = 200;
 
-            const cabinWidth = width - mechanism - cabinThickness - bufferWidth;
-            const cabinDepth = depth - bufferDepth - totalSpaceDoorBuffer;
+            const cabinWidth1 = width1 - mechanism1 - cabinThickness1 - bufferWidth1;
+            const cabinDepth1 = depth1 - bufferDepth1 - totalSpaceDoorBuffer1;
 
-            document.getElementById('cabinWidth').innerText = cabinWidth > 0 ? cabinWidth : "Invalid";
-            document.getElementById('cabinDepth').innerText = cabinDepth > 0 ? cabinDepth : "Invalid";
+            document.getElementById('cabinWidth1').innerText = cabinWidth1 > 0 ? cabinWidth1 : "Invalid";
+            document.getElementById('cabinDepth1').innerText = cabinDepth1 > 0 ? cabinDepth1 : "Invalid";
+
+            // Second table calculations
+            const width2 = parseFloat(document.getElementById('width2').value) || 0;
+            const depth2 = parseFloat(document.getElementById('depth2').value) || 0;
+            const mechanism2 = 300;
+            const cabinThickness2 = 60;
+            const bufferWidth2 = 70;
+            const bufferDepth2 = 70;
+            const totalSpaceDoorBuffer2 = 200;
+
+            const cabinWidth2 = width2 - cabinThickness2 - bufferWidth2 - bufferDepth2;
+            const cabinDepth2 = depth2 - mechanism2 - totalSpaceDoorBuffer2;
+
+            document.getElementById('cabinWidth2').innerText = cabinWidth2 > 0 ? cabinWidth2 : "Invalid";
+            document.getElementById('cabinDepth2').innerText = cabinDepth2 > 0 ? cabinDepth2 : "Invalid";
         }
 
-        document.getElementById('width').addEventListener('input', calculateCabinDimensions);
-        document.getElementById('depth').addEventListener('input', calculateCabinDimensions);
+        document.getElementById('width1').addEventListener('input', calculateCabinDimensions);
+        document.getElementById('depth1').addEventListener('input', calculateCabinDimensions);
+        document.getElementById('width2').addEventListener('input', calculateCabinDimensions);
+        document.getElementById('depth2').addEventListener('input', calculateCabinDimensions);
     </script>
 
 </body>
