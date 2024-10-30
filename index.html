@@ -50,10 +50,30 @@
     </table>
 
     <h2>Feet to Millimeters Converter</h2>
-    <label for="feet">Feet:</label>
-    <input id="feet" type="number" placeholder="Enter feet" />
-    <button onclick="convertFeetToMm()">Convert</button>
-    <p>Millimeters: <span id="millimeters"></span></p>
+<label for="feet">Feet:</label>
+<input id="feet" type="number" placeholder="Enter feet" />
+<button onclick="convertFeetToMm()">Convert</button>
+<p>Millimeters: <span id="millimeters"></span></p>
+
+<script>
+    function convertFeetToMm() {
+        // Get the feet value entered by the user
+        const feet = parseFloat(document.getElementById("feet").value);
+        
+        // Check if the input is a valid number
+        if (isNaN(feet)) {
+            alert("Please enter a valid number for feet.");
+            return;
+        }
+
+        // Conversion factor: 1 foot = 304.8 millimeters
+        const millimeters = feet * 304.8;
+
+        // Display the result in the millimeters span
+        document.getElementById("millimeters").textContent = millimeters.toFixed(2);
+    }
+</script>
+
 
     <h2>Enter Dimensions Once</h2>
     <label for="mainWidth">Width (in mm):</label>
@@ -625,7 +645,7 @@
 </table>
 
 
-<script src="script.js"></script>
+
 <script src="calculateDimensions.js"></script>
 </body>
 </html>
