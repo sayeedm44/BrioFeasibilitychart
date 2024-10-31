@@ -3,9 +3,9 @@ function calculateCabinDimensions() {
     const mainWidth = parseFloat(document.getElementById("mainWidth").value);
     const mainDepth = parseFloat(document.getElementById("mainDepth").value);
 
+    // Skip validation until input is finished
     if (isNaN(mainWidth) || isNaN(mainDepth)) {
-        alert("Please enter valid numbers for main width and depth.");
-        return;
+        return; // Just return without showing alert
     }
 
     // Define an array with cabin IDs and their corresponding offsets for width and depth
@@ -51,6 +51,6 @@ function calculateCabinDimensions() {
     console.log("All calculations completed.");
 }
 
-// Event listener to trigger calculation on button click
-document.getElementById("mainWidth").addEventListener("input", calculateCabinDimensions);
-document.getElementById("mainDepth").addEventListener("input", calculateCabinDimensions);
+// Event listeners to trigger calculation on input blur
+document.getElementById("mainWidth").addEventListener("blur", calculateCabinDimensions);
+document.getElementById("mainDepth").addEventListener("blur", calculateCabinDimensions);
