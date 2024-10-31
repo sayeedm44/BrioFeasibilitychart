@@ -8,80 +8,49 @@ function calculateCabinDimensions() {
         return;
     }
 
+    // Define an array with cabin IDs and their corresponding offsets for width and depth
+    const cabinConfigs = [
+        { widthId: "cabinWidth1", widthOffset: 300 + 60 + 60, depthId: "cabinDepth1", depthOffset: 60 + 200 },
+        { widthId: "cabinWidth2", widthOffset: 70 + 70 + 60, depthId: "cabinDepth2", depthOffset: 300 + 200 },
+        { widthId: "cabinWidth3", widthOffset: 300 + 60 + 60, depthId: "cabinDepth3", depthOffset: 60 + 270 },
+        { widthId: "cabinWidth4", widthOffset: 70 + 60 + 70, depthId: "cabinDepth4", depthOffset: 300 + 270 },
+        { widthId: "cabinWidth5", widthOffset: 300 + 60 + 60, depthId: "cabinDepth5", depthOffset: 60 + 90 },
+        { widthId: "cabinWidth6", widthOffset: 70 + 60 + 70, depthId: "cabinDepth6", depthOffset: 300 + 90 },
+        { widthId: "cabinWidth7", widthOffset: 420 + 60 + 60, depthId: "cabinDepth7", depthOffset: 60 + 200 },
+        { widthId: "cabinWidth8", widthOffset: 60 + 60 + 60, depthId: "cabinDepth8", depthOffset: 420 + 200 },
+        { widthId: "cabinWidth9", widthOffset: 420 + 60 + 60, depthId: "cabinDepth9", depthOffset: 60 + 270 },
+        { widthId: "cabinWidth10", widthOffset: 60 + 60 + 60, depthId: "cabinDepth10", depthOffset: 420 + 270 },
+        { widthId: "cabinWidth11", widthOffset: 420 + 60 + 60, depthId: "cabinDepth11", depthOffset: 60 + 90 },
+        { widthId: "cabinWidth12", widthOffset: 60 + 60 + 60, depthId: "cabinDepth12", depthOffset: 420 + 90 },
+        { widthId: "cabinWidth13", widthOffset: 420 + 60 + 60, depthId: "cabinDepth13", depthOffset: 60 + 200 },
+        { widthId: "cabinWidth14", widthOffset: 60 + 60 + 60, depthId: "cabinDepth14", depthOffset: 420 + 200 },
+        { widthId: "cabinWidth15", widthOffset: 420 + 60 + 60, depthId: "cabinDepth15", depthOffset: 60 + 270 },
+        { widthId: "cabinWidth16", widthOffset: 60 + 60 + 60, depthId: "cabinDepth16", depthOffset: 420 + 270 },
+        { widthId: "cabinWidth17", widthOffset: 420 + 60 + 60, depthId: "cabinDepth17", depthOffset: 60 + 90 },
+        { widthId: "cabinWidth18", widthOffset: 60 + 60 + 60, depthId: "cabinDepth18", depthOffset: 420 + 90 },
+        { widthId: "cabinWidth19", widthOffset: 550 + 60, depthId: "cabinDepth19", depthOffset: 90 + 200 },
+        { widthId: "cabinWidth20", widthOffset: 300 + 60, depthId: "cabinDepth20", depthOffset: 250 + 200 },
+        { widthId: "cabinWidth21", widthOffset: 550 + 60, depthId: "cabinDepth21", depthOffset: 90 + 270 },
+        { widthId: "cabinWidth22", widthOffset: 300 + 60, depthId: "cabinDepth22", depthOffset: 250 + 270 },
+        { widthId: "cabinWidth23", widthOffset: 550 + 60, depthId: "cabinDepth23", depthOffset: 90 + 90 },
+        { widthId: "cabinWidth24", widthOffset: 300 + 60, depthId: "cabinDepth24", depthOffset: 250 + 90 },
+    ];
+
     // Calculate and assign each cabin width and depth value
-    document.getElementById("cabinWidth1").value = (mainWidth - 300 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth1").value = (mainDepth - 60 - 200).toFixed(2);
+    cabinConfigs.forEach(({ widthId, widthOffset, depthId, depthOffset }) => {
+        const cabinWidthElement = document.getElementById(widthId);
+        const cabinDepthElement = document.getElementById(depthId);
 
-    document.getElementById("cabinWidth2").value = (mainWidth - 70 - 70 - 60).toFixed(2);
-    document.getElementById("cabinDepth2").value = (mainDepth - 300 - 200).toFixed(2);
-
-    document.getElementById("cabinWidth3").value = (mainWidth - 300 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth3").value = (mainDepth - 60 - 270).toFixed(2);
-
-    document.getElementById("cabinWidth4").value = (mainWidth - 70 - 60 - 70).toFixed(2);
-    document.getElementById("cabinDepth4").value = (mainDepth - 300 - 270).toFixed(2);
-
-    document.getElementById("cabinWidth5").value = (mainWidth - 300 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth5").value = (mainDepth - 60 - 90).toFixed(2);
-
-    document.getElementById("cabinWidth6").value = (mainWidth - 70 - 60 - 70).toFixed(2);
-    document.getElementById("cabinDepth6").value = (mainDepth - 300 - 90).toFixed(2);
-
-    document.getElementById("cabinWidth7").value = (mainWidth - 420 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth7").value = (mainDepth - 60 - 200).toFixed(2);
-
-    document.getElementById("cabinWidth8").value = (mainWidth - 60 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth8").value = (mainDepth - 420 - 200).toFixed(2);
-
-    document.getElementById("cabinWidth9").value = (mainWidth - 420 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth9").value = (mainDepth - 60 - 270).toFixed(2);
-
-    document.getElementById("cabinWidth10").value = (mainWidth - 60 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth10").value = (mainDepth - 420 - 270).toFixed(2);
-
-    document.getElementById("cabinWidth11").value = (mainWidth - 420 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth11").value = (mainDepth - 60 - 90).toFixed(2);
-
-    document.getElementById("cabinWidth12").value = (mainWidth - 60 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth12").value = (mainDepth - 420 - 90).toFixed(2);
-
-    document.getElementById("cabinWidth13").value = (mainWidth - 420 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth13").value = (mainDepth - 60 - 200).toFixed(2);
-
-    document.getElementById("cabinWidth14").value = (mainWidth - 60 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth14").value = (mainDepth - 420 - 200).toFixed(2);
-
-    document.getElementById("cabinWidth15").value = (mainWidth - 420 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth15").value = (mainDepth - 60 - 270).toFixed(2);
-
-    document.getElementById("cabinWidth16").value = (mainWidth - 60 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth16").value = (mainDepth - 420 - 270).toFixed(2);
-
-    document.getElementById("cabinWidth17").value = (mainWidth - 420 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth17").value = (mainDepth - 60 - 90).toFixed(2);
-
-    document.getElementById("cabinWidth18").value = (mainWidth - 60 - 60 - 60).toFixed(2);
-    document.getElementById("cabinDepth18").value = (mainDepth - 420 - 90).toFixed(2);
-
-    document.getElementById("cabinWidth19").value = (mainWidth - 550 - 60).toFixed(2);
-    document.getElementById("cabinDepth19").value = (mainDepth - 90 - 200).toFixed(2);
-
-    document.getElementById("cabinWidth20").value = (mainWidth - 300 - 60).toFixed(2);
-    document.getElementById("cabinDepth20").value = (mainDepth - 250 - 200).toFixed(2);
-
-    document.getElementById("cabinWidth21").value = (mainWidth - 550 - 60).toFixed(2);
-    document.getElementById("cabinDepth21").value = (mainDepth - 90 - 270).toFixed(2);
-
-    document.getElementById("cabinWidth22").value = (mainWidth - 300 - 60).toFixed(2);
-    document.getElementById("cabinDepth22").value = (mainDepth - 250 - 270).toFixed(2);
-
-    document.getElementById("cabinWidth23").value = (mainWidth - 550 - 60).toFixed(2);
-    document.getElementById("cabinDepth23").value = (mainDepth - 90 - 90).toFixed(2);
-
-    document.getElementById("cabinWidth24").value = (mainWidth - 300 - 60).toFixed(2);
-    document.getElementById("cabinDepth24").value = (mainDepth - 250 - 90).toFixed(2);
+        if (cabinWidthElement && cabinDepthElement) {
+            cabinWidthElement.value = (mainWidth - widthOffset).toFixed(2);
+            cabinDepthElement.value = (mainDepth - depthOffset).toFixed(2);
+        } else {
+            console.warn(`Element with ID ${widthId} or ${depthId} not found in the document.`);
+        }
+    });
+    console.log("All calculations completed.");
 }
 
-// Event listener to trigger calculation on input change
+// Event listener to trigger calculation on button click
 document.getElementById("mainWidth").addEventListener("input", calculateCabinDimensions);
 document.getElementById("mainDepth").addEventListener("input", calculateCabinDimensions);
