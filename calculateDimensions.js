@@ -42,8 +42,8 @@ function calculateCabinDimensions() {
         const cabinDepthElement = document.getElementById(depthId);
 
         if (cabinWidthElement && cabinDepthElement) {
-            cabinWidthElement.value = (mainWidth - widthOffset).toFixed(2);
-            cabinDepthElement.value = (mainDepth - depthOffset).toFixed(2);
+            cabinWidthElement.value = Math.floor(mainWidth - widthOffset);
+            cabinDepthElement.value = Math.floor(mainDepth - depthOffset);
         } else {
             console.warn(`Element with ID ${widthId} or ${depthId} not found in the document.`);
         }
