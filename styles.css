@@ -178,17 +178,19 @@ p.note {
     border-radius: 8px;
 }
 
+/* Responsive Table */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 0.5em;
+    width: 100%; /* Ensure the table takes full width */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
 }
 
 th, td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
+    padding: 10px; /* Consistent padding */
+    text-align: center; /* Center align text */
+    border: 1px solid #ccc; /* Border for table cells */
+    word-wrap: break-word; /* Allow breaking of long words */
 }
+
 
 /* Background color for specific table cells */
 #displayWidth1, #displayDepth1,
@@ -270,3 +272,27 @@ p.warning { /* New class for the additional note */
     }
 }
 
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table {
+        display: block; /* Change table to block for mobile */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping of text */
+    }
+
+    th, td {
+        display: inline-block; /* Change to inline-block for better stacking */
+        text-align: left; /* Align text to the left for better readability */
+        padding: 8px; /* Adjust padding */
+    }
+
+    th {
+        background-color: #684ca4; /* Keep header background */
+        color: white; /* Keep header text color */
+    }
+
+    td.fixed-value, td.result-cell {
+        background-color: #f3f3f3; /* Maintain fixed-value and result-cell background */
+    }
+}
