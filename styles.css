@@ -273,26 +273,3 @@ p.warning { /* New class for the additional note */
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    table {
-        display: block; /* Change table to block for mobile */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent wrapping of text */
-    }
-
-    th, td {
-        display: inline-block; /* Change to inline-block for better stacking */
-        text-align: left; /* Align text to the left for better readability */
-        padding: 8px; /* Adjust padding */
-    }
-
-    th {
-        background-color: #684ca4; /* Keep header background */
-        color: white; /* Keep header text color */
-    }
-
-    td.fixed-value, td.result-cell {
-        background-color: #f3f3f3; /* Maintain fixed-value and result-cell background */
-    }
-}
