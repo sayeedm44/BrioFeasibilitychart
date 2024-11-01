@@ -32,6 +32,14 @@ p.note {
     border-radius: 8px;
 }
 
+.table-wrapper1 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+
+
 table {
     width: 100%;
     border-collapse: collapse;
