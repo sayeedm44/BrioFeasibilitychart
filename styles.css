@@ -32,6 +32,20 @@ p.note {
     border-radius: 8px;
 }
 
+.table-wrapper {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.table-wrapper1 {
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 8px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
