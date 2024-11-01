@@ -51,16 +51,6 @@ td.result-cell {
     background-color: #f3f3f3; /* Set background color */
 }
 
-/* Remove box appearance for input fields */
-.result-cell input[type="text"] {
-    border: none; /* Remove border */
-    background: transparent; /* Remove background */
-    width: 100%; /* Full width of the cell */
-    color: black; /* Text color */
-    padding: 0; /* Remove padding */
-    text-align: center; /* Center text */
-}
-
 /* Colors and Styling for Specific Sections */
 h2, h3 {
     text-align: center;
