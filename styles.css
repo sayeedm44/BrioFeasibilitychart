@@ -33,29 +33,144 @@ p.note {
 }
 
 /* Set background color and styling for all table-wrapper classes from 1 to 24 */
-.table-wrapper1,
-.table-wrapper2,
-.table-wrapper3,
-.table-wrapper4,
-.table-wrapper5,
-.table-wrapper6,
-.table-wrapper7,
-.table-wrapper8,
-.table-wrapper9,
-.table-wrapper10,
-.table-wrapper11,
-.table-wrapper12,
-.table-wrapper13,
-.table-wrapper14,
-.table-wrapper15,
-.table-wrapper16,
-.table-wrapper17,
-.table-wrapper18,
-.table-wrapper19,
-.table-wrapper20,
-.table-wrapper21,
-.table-wrapper22,
-.table-wrapper23,
+.table-wrapper1 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper2 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper3 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper4 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper5 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper6 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper7 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper8 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper9 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper10 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper11 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper12 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper13 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper14 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper15 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper16 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper17 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper18 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper19 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper20 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper21 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper22 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+.table-wrapper23 {
+    background-color: #f3f3f3; /* Set background color to #f3f3f3 */
+    padding: 15px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
 .table-wrapper24 {
     background-color: #f3f3f3; /* Set background color to #f3f3f3 */
     padding: 15px;
