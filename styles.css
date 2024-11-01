@@ -36,6 +36,7 @@ p.note {
     background-color: #f3f3f3; /* Set background color to #f3f3f3 */
     padding: 15px;
     padding-bottom: 30px;
+    padding-top: 10px;
     border-radius: 8px;
 }
 
