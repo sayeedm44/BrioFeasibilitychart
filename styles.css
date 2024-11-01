@@ -57,12 +57,12 @@ th {
 }
 
 td.fixed-value {
-    background-color: red;
+    background-color: #f3f3f3;
     color: black;
 }
 
 td.result-cell {
-    background-color: blue;
+    background-color: #f3f3f3#f3f3f3;
     color: white;
 }
 
