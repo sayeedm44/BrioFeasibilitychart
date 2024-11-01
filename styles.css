@@ -12,7 +12,7 @@ h1 {
 }
 
 p.note {
-    color: red;
+    color: #f3f3f3;
     font-size: 1em;
     margin-top: 0.5em;
 }
@@ -90,7 +90,7 @@ td.result-cell {
 
 /* Footer Note */
 .footer-note {
-    color: red;
+    color: #f3f3f3;
     font-weight: bold;
 }
 
@@ -115,7 +115,7 @@ h1 {
 }
 
 p.note {
-    color: red;
+    color: #f3f3f3;
     font-size: 1em;
     margin-top: 0.5em;
 }
@@ -178,7 +178,7 @@ td.result-cell {
 
 /* Footer Note */
 .footer-note {
-    color: red;
+    color: #f3f3f3;
     font-weight: bold;
 }
 
