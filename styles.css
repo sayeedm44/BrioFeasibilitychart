@@ -12,7 +12,7 @@ h1 {
 }
 
 p.note {
-    color: #f3f3f3;
+    color: red; /* Updated to red color */
     font-size: 1em;
     margin-top: 0.5em;
 }
@@ -32,21 +32,6 @@ p.note {
     border-radius: 8px;
 }
 
-.table-wrapper {
-    flex: 1;
-    min-width: 300px;
-    background-color: #f3f3f3;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.table-wrapper1 {
-    background-color: #f3f3f3;
-    padding: 15px;
-    padding-bottom: 30px;
-    border-radius: 8px;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -59,92 +44,11 @@ th, td {
     border: 1px solid #ccc;
 }
 
-/* Colors and Styling for Specific Sections */
-h2, h3 {
-    text-align: center;
-    color: #806404;
-    margin-top: 1em;
-}
-
-th {
-    background-color: #684ca4;
-    color: white;
-}
-
-td.fixed-value {
-    background-color: #f3f3f3;
-    color: black;
-}
-
+/* Background color for specific table cells */
+#displayWidth1, #displayDepth1,
+td.fixed-value, 
 td.result-cell {
-    background-color: #f3f3f3;
-    color: white;
-}
-
-/* Responsive Tables */
-@media (max-width: 768px) {
-    .tables-container {
-        flex-direction: column;
-    }
-}
-
-/* Footer Note */
-.footer-note {
-    color: #f3f3f3;
-    font-weight: bold;
-}
-
-/* Special Section Backgrounds */
-.section-bg {
-    background-color: #e3f2fd;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 1em;
-}
-/* Logo and Title */
-img[alt="Brio Logo"] {
-    float: left;
-    width: 100px;
-    height: auto;
-}
-
-h1 {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 0;
-}
-
-p.note {
-    color: #f3f3f3;
-    font-size: 1em;
-    margin-top: 0.5em;
-}
-
-/* Tables Layout */
-.tables-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.table-wrapper {
-    flex: 1;
-    min-width: 300px;
-    background-color: #f3f3f3;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 0.5em;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
+    background-color: #f3f3f3; /* Set background color */
 }
 
 /* Colors and Styling for Specific Sections */
