@@ -95,6 +95,10 @@ td.result-cell {
     font-weight: bold;
 }
 
+p.warning { /* New class for the additional note */
+    color: red; /* Make this text red */
+}
+
 /* Special Section Backgrounds */
 .section-bg {
     background-color: #e3f2fd;
