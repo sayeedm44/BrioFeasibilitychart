@@ -178,17 +178,16 @@ p.note {
     border-radius: 8px;
 }
 
-/* Responsive Table */
 table {
-    width: 100%; /* Ensure the table takes full width */
-    border-collapse: collapse; /* Collapse borders for cleaner look */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5em;
 }
 
 th, td {
-    padding: 10px; /* Consistent padding */
-    text-align: center; /* Center align text */
-    border: 1px solid #ccc; /* Border for table cells */
-    word-wrap: break-word; /* Allow breaking of long words */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
 }
 
 
