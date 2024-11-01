@@ -2,6 +2,8 @@
 function calculateCabinDimensions() {
     const mainWidth = parseFloat(document.getElementById("mainWidth").value);
     const mainDepth = parseFloat(document.getElementById("mainDepth").value);
+    document.getElementById("displayWidth").textContent = mainWidth;
+    document.getElementById("displayDepth").textContent = mainDepth;
 
     // Skip validation until input is finished
     if (isNaN(mainWidth) || isNaN(mainDepth)) {
