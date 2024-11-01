@@ -96,7 +96,7 @@ td.result-cell {
 }
 
 p.warning { /* New class for the additional note */
-    color: red; /* Make this text red */
+    color: red; /* Make this text red*/
 }
 
 /* Special Section Backgrounds */
